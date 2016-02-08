@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" src="../../polymer/polymer.html">
+</head>
+
+<body>
+
+  <dom-module id="vaadin-icon">
+  <style>
+    :host {
+      @apply(--layout-inline);
+      @apply(--layout-center-center);
+      position: relative;
+      vertical-align: middle;
+      fill: var(--vaadin-icon-fill-color, currentcolor);
+      stroke: var(--vaadin-icon-stroke-color, none);
+      width: var(--vaadin-icon-width, 24px);
+      height: var(--vaadin-icon-height, 24px);
+    }
+  </style>
+    <template>
+    </template>
+  </dom-module>
+
+  <script>
+    Polymer({
+      is: 'vaadin-icon',
+
+      properties: {
+        icon: {
+          type: String
+        }
+      },
+
+      ready: function() {
+        this.importHref('../../vaadin-icons/assets/' + this.icon + '.svg', function(e) {
+          var svg = e.target.import.querySelector('svg');
+
+          var paths = svg.querySelectorAll('path[fill]');
+          for(var i=0;i<paths.length;i++) {
+            paths[i].removeAttribute('fill');
+          }
+
+          Polymer.dom(this.root).appendChild(svg);
+        });
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

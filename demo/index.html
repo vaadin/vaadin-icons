@@ -6,6 +6,7 @@
 
         <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
         <link rel="import" href="../vaadin-icons.html" />
+        <link rel="import" href="../vaadin-icon.html" />
         <link rel="import" href="../../iron-flex-layout/classes/iron-flex-layout.html" />
 
         <style>
@@ -26,12 +27,12 @@
             .icon:hover span {
                 color: #00b4f0;
             }
-            iron-icon {
+            vaadin-icon {
                 fill: #616161;
                 -webkit-transition: all 200ms;
                 transition: all 200ms;
             }
-            .icon:hover iron-icon {
+            .icon:hover vaadin-icon {
                 fill: #00b4f0;
             }
         </style>
@@ -43,7 +44,7 @@
                 <template is="dom-repeat" items="{{iconsets}}">
                     <template is="dom-repeat" items="{{getIconNames(item)}}">
                         <div class="icon">
-                            <iron-icon icon="[[item]]"></iron-icon>
+                            <vaadin-icon icon="[[item]]"></vaadin-icon>
                             <span>{{item}}</span>
                         </div>
                     </template>
@@ -53,7 +54,14 @@
 
         <script>
             document.querySelector('[is=dom-bind]').getIconNames = function(iconset) {
-                return iconset.getIconNames();
+              var trimmedNames = [];
+              var iconNames = iconset.getIconNames();
+
+              for(var i=0;i<iconNames.length;i++) {
+                  trimmedNames[i] = iconNames[i].substring(13);
+              }
+
+              return trimmedNames;
             };
         </script>
     </body>
