@@ -7,12 +7,22 @@ var modify = require('gulp-modify');
 var cheerio = require('cheerio');
 var concat = require('gulp-concat');
 
-gulp.task('download', function() {
-  // Download vaadin icon files using bower
-  return bower({}, [['vaadin/vaadin-icons-files']]);
+//gulp.task('download', function() {
+//  // Download vaadin icon files using bower
+//  // DISABLED because the repo is DEPRECATED in favour of
+//  //          the local 'assets' directory.
+//  return bower({}, [['vaadin/vaadin-icons-files']]);
+//});
+
+gulp.task('copy', function() {
+  // Copy vaadin icon files from 'assets' to bower_components/vaadin_icon_files
+  // TODO: This is not very clean, some GULP expert please come to the rescue.
+  //       Enver <enver@vaadin.com> 20161110
+  gulp.src('assets/**/**')
+        .pipe(gulp.dest('bower_components/vaadin-icons-files/'))
 });
 
-gulp.task('default', ['download'], function() {
+gulp.task('default', ['copy'], function() {
   return gulp.src(['bower_components/vaadin-icons-files/svg/*.svg'], {base: '.'})
     .pipe(modify({
       fileModifier: function(file, contents) {
