@@ -10,6 +10,17 @@
 
 Visit **https://vaadin.com/icons** for more information and instructions how to get started using them.
 
+
+## Running demos in browser
+
+1. Install [polymer-cli](https://www.npmjs.com/package/polymer-cli): `npm install -g polymer-cli`
+
+1. When in the `vaadin-split-layout` directory, run `polymer serve`, after that you will be able to access:
+
+  - Polymer1-compatible version: http://127.0.0.1:8000/components/vaadin-icons/demo/
+  - Polymer2-compatible version: http://127.0.0.1:8001/components/vaadin-icons/demo/
+
+
 ## License
 
 The icon files (SVG, PNG, fonts) are licensed under Creative Commons [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
