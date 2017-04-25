@@ -5,7 +5,7 @@ gemini.suite('vaadin-icons', function(rootSuite) {
       .setUrl('../../demo/index.html')
       .setCaptureElements('body')
       .capture('default', {}, function(actions, find) {
-        actions.wait(5000);
+        actions.wait(10000);
       });
   });
 
