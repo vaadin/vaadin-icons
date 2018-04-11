@@ -8,7 +8,7 @@ cache:
     - node_modules
 
 install:
-  - npm install
+  - yarn install
   - polymer install --variants
 
 script:
