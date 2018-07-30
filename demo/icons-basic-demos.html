@@ -90,7 +90,7 @@
       }
 
       getIconNames(iconset, search) {
-        return iconset.getIconNames().filter(name => RegExp('^vaadin:' + search, 'i').test(name));
+        return iconset.getIconNames().filter(name => RegExp('^vaadin:.*' + search + '.*', 'i').test(name));
       }
     }
 
