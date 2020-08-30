@@ -289,7 +289,7 @@ The following table lists the icons currently available in the [vaadinelement]#v
 | image:../assets/png/form.png[] | [propertyname]#form# | form | e64b | Web application | layout, html, component
 | image:../assets/png/forward.png[] | [propertyname]#forward# | forward | e77c | Media, Player | next
 | image:../assets/png/frown-o.png[] | [propertyname]#frown-o# | frown-o | e6a4 | Social, Sign | unhappy, sad, emoji
-| image:../assets/png/funcion.png[] | [propertyname]#funcion# | funcion | e64c | Web application | math, code
+| image:../assets/png/function.png[] | [propertyname]#function# | function | e64c | Web application | math, code
 | image:../assets/png/gamepad.png[] | [propertyname]#gamepad# | gamepad | e714 | Media, Item | game, pad, joystick
 | image:../assets/png/gavel.png[] | [propertyname]#gavel# | gavel | e6a5 | Tools, Item | auction, justice, hammer
 | image:../assets/png/gift.png[] | [propertyname]#gift# | gift | e715 | Item | present, birthday

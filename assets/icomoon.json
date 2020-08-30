@@ -5679,7 +5679,7 @@
         "isMulticolor": false,
         "grid": 16,
         "tags": [
-          "funcion"
+          "function"
         ]
       },
       "attrs": [
@@ -5690,8 +5690,8 @@
         "id": 453,
         "prevSize": 16,
         "code": 58956,
-        "name": "funcion",
-        "ligatures": "funcion"
+        "name": "function",
+        "ligatures": "function"
       },
       "setIdx": 0,
       "setId": 1,
