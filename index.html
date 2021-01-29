@@ -1,16 +1,89 @@
-
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
   <head>
     <title>vaadin-icons</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../polymer/polymer.html">
-    <link rel="import" href="../iron-component-page/iron-component-page.html">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+  <style>
+    .iconset-container {
+      margin-top: 1em;
+    }
+
+    .icon-container {
+      margin: 18px 0;
+      padding: 0 5px;
+      text-align: center;
+      width: 19.3%;
+      display: inline-block;
+      cursor: default;
+      vertical-align: top;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 1024px) {
+      .icon-container {
+        width: 24%;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .icon-container {
+        width: 32%;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .icon-container {
+        width: 49%;
+      }
+    }
+
+    .icon-container span {
+      font-family: sans-serif;
+      font-size: 12px;
+      display: block;
+      margin-top: 0.5em;
+      color: #616161;
+      transition: all 600ms;
+    }
+
+    .icon-container:hover span {
+      color: #00b4f0;
+    }
+
+    .icon-container vaadin-icon {
+      display: inline-block;
+      fill: #616161;
+      transition: all 200ms;
+      width: 30px;
+      height: 30px;
+    }
+
+    .icon-container:hover vaadin-icon {
+      fill: #00b4f0;
+    }
+  </style>
   <body>
-    <iron-component-page src="vaadin-icons.html"></iron-component-page>
+    <div id="container" class="iconset-container"></div>
+    <script type="module">
+      import { html, render } from 'lit-html';
+      import { camelToDashCase } from '@polymer/polymer/lib/utils/case-map.js';
+      import './vaadin-icon.js';
+      import { icons } from './vaadin-icons.js';
+      render(
+        html`${Object.keys(icons).map((name) => {
+          const icon = `vaadin:${camelToDashCase(name)}`;
+          return html`
+            <div class="icon-container">
+              <vaadin-icon .icon="${icon}"></vaadin-icon>
+              <span>${icon}</span>
+            </div>
+          `;
+        })}`,
+        document.getElementById('container')
+      );
+    </script>
   </body>
 </html>

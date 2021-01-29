@@ -4,7 +4,7 @@
 const gulp = require('gulp');
 const modify = require('gulp-modify');
 const cheerio = require('cheerio');
-const concat = require('gulp-concat');
+const path = require('path');
 
 gulp.task('icons', function() {
   return gulp.src(['assets/svg/*.svg'], {base: '.'})
@@ -18,30 +18,22 @@ gulp.task('icons', function() {
         return '<g id="' + id + '">' + svg.children() + '</g>';
       }
     }))
-    .pipe(concat('iconset.html'))
     .pipe(modify({
       fileModifier: function(file, contents) {
         /* eslint-disable max-len */
         // Enclose all icons in an iron-iconset-svg
-        return /* html */`<!-- NOTICE: Generated with 'gulp icons' -->
-<!--
-@license
-Copyright (c) 2019 Vaadin Ltd.
-This program is available under Apache License Version 2.0, available at https://vaadin.com/license/
--->
+        file.path = path.join('.', path.basename(file.path, path.extname(file.path))) + '.js';
+        return `import { html } from 'lit-html';
 
-<link rel="import" href="../iron-iconset-svg/iron-iconset-svg.html">
-
-<iron-iconset-svg name="vaadin" size="16">
-<svg><defs>
-` + contents + `
-</defs></svg>
-</iron-iconset-svg>
-`;
-        /* eslint-enable max-len */
+export default html\`
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+    ${contents}
+  </svg>
+\`;
+`
       }
     }))
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('./icons'));
 });
 
 // Generates an AsciiDoc table of all icons from the JSON metadata.

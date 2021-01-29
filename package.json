@@ -18,17 +18,27 @@
   },
   "homepage": "https://vaadin.com/icons",
   "files": [
-    "iconset.js",
-    "vaadin-icons.js"
+    "vaadin-*.js",
+    "src",
+    "icons"
   ],
   "scripts": {
-    "prestart": "polymer analyze vaadin-* > analysis.json",
-    "start": "polymer serve --port 3000 --open"
+    "icons": "gulp icons && create-index-normalized ./icons && rollup -c",
+    "prepublishOnly": "npm run icons",
+    "start": "web-dev-server --node-resolve --open"
+  },
+  "dependencies": {
+    "lit-element": "^2.0.0"
   },
   "devDependencies": {
-    "@vaadin/vaadin-component-dev-dependencies": "^1.0.0",
-    "cheerio": "^1.0.0-rc.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-modify": "^0.1.1"
+    "@polymer/polymer": "^3.4.1",
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "@web/dev-server": "^0.1.5",
+    "cheerio": "^1.0.0-rc.5",
+    "create-index-normalized": "^1.2.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-modify": "^0.1.1",
+    "rollup": "^2.38.1"
   }
 }
