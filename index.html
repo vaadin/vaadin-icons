@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <style>
+    h2 {
+      text-align: center;
+    }
+
     .iconset-container {
       margin-top: 1em;
     }
@@ -72,16 +76,33 @@
       import { camelToDashCase } from '@polymer/polymer/lib/utils/case-map.js';
       import './vaadin-icon.js';
       import { icons } from './vaadin-icons.js';
+      import * as glyphs from '/vaadin-icons-bundle.js';
       render(
-        html`${Object.keys(icons).map((name) => {
-          const icon = `vaadin:${camelToDashCase(name)}`;
-          return html`
-            <div class="icon-container">
-              <vaadin-icon .icon="${icon}"></vaadin-icon>
-              <span>${icon}</span>
-            </div>
-          `;
-        })}`,
+        html`
+          <h2>Using icon property</h2>
+          <div>
+            ${Object.keys(icons).map((name) => {
+              const icon = `vaadin:${camelToDashCase(name)}`;
+              return html`
+                <div class="icon-container">
+                  <vaadin-icon .icon="${icon}"></vaadin-icon>
+                  <span>${icon}</span>
+                </div>
+              `;
+            })}
+          </div>
+          <h2>Using svg property</h2>
+          <div>
+            ${Object.entries(icons).map(([name, svg]) => {
+              return html`
+                <div class="icon-container">
+                  <vaadin-icon .svg="${svg}"></vaadin-icon>
+                  <span>${name}</span>
+                </div>
+              `;
+            })}
+          </div>
+        `,
         document.getElementById('container')
       );
     </script>

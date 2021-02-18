@@ -23,13 +23,9 @@ gulp.task('icons', function() {
         /* eslint-disable max-len */
         // Enclose all icons in an iron-iconset-svg
         file.path = path.join('.', path.basename(file.path, path.extname(file.path))) + '.js';
-        return `import { html } from 'lit-html';
+        return `import { svg } from 'lit-html';
 
-export default html\`
-  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-    ${contents}
-  </svg>
-\`;
+export default svg\`${contents}\`;
 `
       }
     }))
