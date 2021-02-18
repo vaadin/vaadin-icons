@@ -55,6 +55,12 @@ export class VaadinIcon extends LitElement {
           width: 100%;
           height: 100%;
         }
+
+        :host([dir='rtl']) ::slotted(svg) {
+          -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+          transform-origin: center;
+        }
       `
     ];
   }
