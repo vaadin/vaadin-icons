@@ -1,3 +1,8 @@
+/**
+ * @license
+ * Copyright (c) 2015 - 2021 Vaadin Ltd.
+ * This program is available under Apache License Version 2.0, available at https://vaadin.com/license/
+ */
 import '@polymer/iron-iconset-svg/iron-iconset-svg.js';
 const $_documentContainer = document.createElement('template');
 
@@ -643,16 +648,3 @@ $_documentContainer.innerHTML = `<iron-iconset-svg name="vaadin" size="16">
 </iron-iconset-svg>`;
 
 document.head.appendChild($_documentContainer.content);
-
-/* NOTICE: Generated with 'gulp icons' */
-/**
-@license
-Copyright (c) 2019 Vaadin Ltd.
-This program is available under Apache License Version 2.0, available at https://vaadin.com/license/
-*/
-/*
-  FIXME(polymer-modulizer): the above comments were extracted
-  from HTML and may be out of place here. Review them and
-  then delete this comment!
-*/
-;
