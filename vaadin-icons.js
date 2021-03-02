@@ -5,18 +5,3 @@
  */
 import '@polymer/iron-icon/iron-icon.js';
 import './iconset.js';
-
-/**
- * `vaadin-icons` is a set of 600+ icons which can be used together with
- * Polymer's [`iron-icon`](https://www.webcomponents.org/element/@polymer/iron-icon) component.
- *
- * To use the `vaadin-icons` iconset, [install and import](https://github.com/vaadin/vaadin-icons#installation)
- * the iconset, and specify the icon as `vaadin:<icon>`. For example, to use
- * a cart icon, you would use:
- * ```html
- * <iron-icon icon="vaadin:cart"></iron-icon>
- * ```
- *
- * For the complete list of available icons, see https://vaadin.com/components/vaadin-icons/html-examples
- * @pseudoElement vaadin-icons
- */
