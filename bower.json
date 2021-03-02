@@ -32,20 +32,6 @@
     "iron-iconset-svg": "^2.0.0"
   },
   "devDependencies": {
-    "iron-component-page": "^3.0.0",
-    "iron-meta": "^2.0.0",
-    "vaadin-demo-helpers": "vaadin/vaadin-demo-helpers#^2.2.0",
-    "vaadin-text-field": "vaadin/vaadin-text-field#^2.1.1"
-  },
-  "variants": {
-    "1.x": {
-      "dependencies": {
-        "polymer": "^1.7.0"
-      },
-      "resolutions": {
-        "webcomponentsjs": "^0.7.24",
-        "polymer": "^1.7.0"
-      }
-    }
+    "iron-component-page": "^3.0.0"
   }
 }
