@@ -19,4 +19,4 @@ import './iconset.js';
  *
  * For the complete list of available icons, see https://vaadin.com/components/vaadin-icons/html-examples
  * @pseudoElement vaadin-icons
-*/
+ */
