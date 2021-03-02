@@ -1,13 +1,12 @@
-<!--
+import '@polymer/iron-icon/iron-icon.js';
+import './iconset.js';
+
+/**
 @license
 Copyright (c) 2015-2019 Vaadin Ltd.
 This program is available under Apache License Version 2.0, available at https://vaadin.com/license/
--->
-
-<link rel="import" href="../iron-icon/iron-icon.html">
-<link rel="import" href="iconset.html">
-
-<!--
+*/
+/**
 `vaadin-icons` is a set of 600+ icons which can be used together with
 Polymer's [`iron-icon`](https://www.webcomponents.org/element/@polymer/iron-icon) component.
 
@@ -20,4 +19,10 @@ a cart icon, you would use:
 
 For the complete list of available icons, see https://vaadin.com/components/vaadin-icons/html-examples
 @pseudoElement vaadin-icons
--->
+*/
+/*
+  FIXME(polymer-modulizer): the above comments were extracted
+  from HTML and may be out of place here. Review them and
+  then delete this comment!
+*/
+;
