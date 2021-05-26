@@ -1,19 +1,15 @@
+# Vaadin Icons
+
+> ⚠️ Starting from Vaadin 20, the source code and issues for this component are migrated to the [`vaadin/web-components`](https://github.com/vaadin/web-components/tree/master/packages/vaadin-icons) monorepository.
+> This repository contains the source code and releases of `<vaadin-icons>` for the Vaadin versions 10 to 19.
+
 [![npm version](https://badgen.net/npm/v/@vaadin/vaadin-icons)](https://www.npmjs.com/package/@vaadin/vaadin-icons)
 [![Bower version](https://badgen.net/github/release/vaadin/vaadin-icons)](https://github.com/vaadin/vaadin-icons/releases)
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/vaadin/vaadin-icons)
 [![Build status](https://travis-ci.org/vaadin/vaadin-icons.svg?branch=master)](https://travis-ci.org/vaadin/vaadin-icons)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vaadin/web-components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 [![Published on Vaadin Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/vaadinvaadin-icons)
 [![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/vaadinvaadin-icons.svg)](https://vaadin.com/directory/component/vaadinvaadin-icons)
-
-# Vaadin Icons
-
-> ⚠️ 　Starting from Vaadin 20, this project has migrated to [`vaadin-web-components`](https://github.com/vaadin/vaadin-web-components/tree/master/packages/vaadin-icons) *monorepository*.
->
-> This repository is used for Vaadin 14 LTS and Vaadin 19.
-
----
 
 [<img src="https://raw.github.com/vaadin/vaadin-icons/master/screenshot.png" width="611" alt="Screenshot of some icons in the Vaadin Icons collection" />](https://vaadin.com/icons)
 
